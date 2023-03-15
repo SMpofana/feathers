@@ -1,0 +1,312 @@
+:root{
+    --color-primary: #DF6CA8;
+    --color-secondary: #4c4b4c;
+    --color-grey: #e4cfd9;
+    --color-charcoal: #232021;
+    --color-dark-grey: #3d3a3b;
+    --color-black: rgba(0,0,0,1);
+
+    --br-sm-2: 14px;
+    --box-shadow-1: 0 3px 15px rgba(0,0,0,.2);
+
+    //font size
+    --fs-xxl: clamp(5em, 6.5vw + 1em, 5em);
+    --fs-xl: clamp(3em, 5vw + 1em, 5em);
+    --fs-l: 3em;
+    --fs-m: 1.2em;
+    --fs-s: 1em;
+}
+*{
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none; 
+    scroll-behavior: smooth; 
+
+}
+
+body{
+    font-family: 'Petrona', serif;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    transition: all .4s ease-in-out;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    
+}
+
+section{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+@media (max-width:35em){
+    .header_menu{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        position: relative;
+        align-items: center;
+
+        .logo{
+            width: 20%;
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .ham_menu{
+            width: 15%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 2%;
+            gap: .4em;
+            justify-content: center;
+            align-items: center;
+
+            .line{
+                width: 50%;
+                height: .2em;
+                background-color: #232021;
+                border-radius: 1.5em;
+
+                &.line2{
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    .landing{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        scroll-behavior: smooth;
+        overflow-y: hidden;
+
+
+        .landing_slides{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            gap: 1em;
+            overflow-x: auto;
+            scroll-behavior: auto;
+            
+            .landing_slide{
+                min-width: 100%;
+                position: relative;
+
+                #slide-cover{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background-color: rgba(0,0,0,.5);
+                    z-index: 5;
+
+                }
+
+                .slide_title{
+                    margin: 0;
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 15%;
+                    font-size: 2em;
+                    color: var(--color-grey);
+                    z-index: 10;
+                }
+
+                &:nth-child(1):before{
+                    content: "We're";
+                    position: absolute;
+                    top: 0;
+                    color: var(--color-primary);
+                    font-weight: 900;
+                    font-size: 3em;
+                    z-index: 10;
+                }
+                
+                &:nth-child(2):before{
+                    content: "Born";
+                    position: absolute;
+                    top: 0;
+                    color: var(--color-primary);
+                    font-weight: 900;
+                    font-size: 3em;
+                    z-index: 10;
+                }
+
+                &:nth-child(3):before{
+                    content: "Perfectly";
+                    position: absolute;
+                    top: 0;
+                    color: var(--color-primary);
+                    font-weight: 900;
+                    font-size: 3em;
+                    z-index: 10;
+                }
+
+                &:nth-child(4):before{
+                    content: "Be";
+                    position: absolute;
+                    top: 0;
+                    color: var(--color-primary);
+                    font-weight: 900;
+                    font-size: 3em;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width:35em){
+    .header_menu{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        position: relative;
+        align-items: center;
+
+        .logo{
+            width: 20%;
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .ham_menu{
+            width: 10%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 2%;
+            gap: .4em;
+            justify-content: center;
+            align-items: center;
+
+            .line{
+                width: 50%;
+                height: .2em;
+                background-color: #232021;
+                border-radius: 1.5em;
+
+                &.line2{
+                    width: 80%;
+                }
+            }
+        }
+    }
+    .landing{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        scroll-behavior: smooth;
+        overflow-y: hidden;
+
+
+        .landing_slides{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            gap: 1em;
+            overflow-x: auto;
+            scroll-behavior: auto;
+            
+            .landing_slide{
+                min-width: 100%;
+                position: relative;
+
+                #slide-cover{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background-color: rgba(0,0,0,.5);
+                    z-index: 5;
+
+                }
+
+                .slide_title{
+                    margin: 0;
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 15%;
+                    font-size: 2em;
+                    color: var(--color-grey);
+                    z-index: 10;
+                }
+
+                &:nth-child(1):before{
+                    content: "We're";
+                    position: absolute;
+                    top: 0;
+                    color: var(--color-primary);
+                    font-weight: 900;
+                    font-size: 3em;
+                    z-index: 10;
+                }
+                
+                &:nth-child(2):before{
+                    content: "Born";
+                    position: absolute;
+                    top: 0;
+                    color: var(--color-primary);
+                    font-weight: 900;
+                    font-size: 3em;
+                    z-index: 10;
+                }
+
+                &:nth-child(3):before{
+                    content: "Perfectly";
+                    position: absolute;
+                    top: 0;
+                    color: var(--color-primary);
+                    font-weight: 900;
+                    font-size: 3em;
+                    z-index: 10;
+                }
+
+                &:nth-child(4):before{
+                    content: "Be";
+                    position: absolute;
+                    top: 0;
+                    color: var(--color-primary);
+                    font-weight: 900;
+                    font-size: 3em;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+    
+}
